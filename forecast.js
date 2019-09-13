@@ -1,3 +1,4 @@
+//WORKING WITH THE APIs
 //API key for the AccuWeather Site
 const key = "nVXAnrLGxpPF2AIZArGPevsnabun6gIh";
 
@@ -11,8 +12,11 @@ const getWeather = async (id) => {
     const response = await fetch(base + query);
     const data = await response.json();
 
+    /*
     console.log(data[0]);
-
+    console.log(data[0].Temperature);
+    console.log(data[0].Temperature.Metric.Value);
+    */
     return data[0];
     
 };
@@ -27,7 +31,7 @@ const getCity = async (city) => {
     const response = await fetch(base + query);
     const data = await response.json();
 
-    console.log(data[0]);
+    //console.log(data[0]);
     //gets the closes match
     return data[0];
 
